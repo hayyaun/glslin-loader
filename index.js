@@ -9,18 +9,18 @@ module.exports = function (source, ...rest) {
 
   const reg = /#(pragma\s+)?include\s+(['"])([^'"]+)\2;?/gi;
   source = source.replace(reg, ($, _1, _2, name) => {
-    const headerPath = path.resolve(root, name);
-    this.addDependency(headerPath);
+    const includePath = path.resolve(root, name);
+    this.addDependency(includePath);
 
-    const headerContent = fs.readFileSync(
-      headerPath,
+    const includeContent = fs.readFileSync(
+      includePath,
       { encoding: "utf-8", flag: "r" },
       function (err, _) {
         if (err) return this.callback(err);
       }
     );
 
-    return headerContent;
+    return includeContent;
   });
 
   this.callback(null, source, ...rest);
