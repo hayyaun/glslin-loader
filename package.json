@@ -4,7 +4,8 @@
   "description": "A glsl loader that works like include macro in c to share code between files",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run tape --silent",
+    "tape": "tape test/index.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/hayyaun/glslin-loader/issues"
   },
-  "homepage": "https://github.com/hayyaun/glslin-loader#readme"
+  "homepage": "https://github.com/hayyaun/glslin-loader#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^5.8.1"
+  }
 }
