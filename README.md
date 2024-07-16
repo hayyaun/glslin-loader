@@ -26,7 +26,7 @@ rules: [
         // use loader
         loader: "glslin-loader",
         options: {
-          root: path.resolve(__dirname, "src/three/shaders/lib"),
+          root: path.resolve(__dirname, "src/shaders/lib"),
         },
       },
     ],

@@ -1,7 +1,7 @@
 {
   "name": "glslin-loader",
   "version": "1.0.0",
-  "description": "a glsl loader that works like include macro in c to share code between files",
+  "description": "A glsl loader that works like include macro in c to share code between files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
