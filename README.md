@@ -45,7 +45,8 @@ uniform vec2 u_transform;
 varying vec2 v_uv;
 varying vec2 v_aspect;
 
-#include "math.glsl"   <--- definition
+#pragma include "math.glsl"   <--- definition
+#include "math.glsl"          <--- or short
 
 void main() {
   ...
