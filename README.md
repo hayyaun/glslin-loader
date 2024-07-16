@@ -1,6 +1,6 @@
 # glslin-loader
 
-glslin-loader is a loader that injects another glsl file content into the current glsl file.
+glslin-loader is a loader that injects another glsl file content into the current file.
 
 ## Install
 
@@ -22,8 +22,8 @@ rules: [
     use: [
       "raw-loader",
       "glslify-loader",
+      // use loader
       {
-        // use loader
         loader: "glslin-loader",
         options: {
           root: path.resolve(__dirname, "src/shaders/lib"),
@@ -45,7 +45,7 @@ uniform vec2 u_transform;
 varying vec2 v_uv;
 varying vec2 v_aspect;
 
-#pragma include "math.glsl"   <--- definition
+#include "math.glsl"   <--- definition
 
 void main() {
   ...
