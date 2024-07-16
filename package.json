@@ -1,0 +1,25 @@
+{
+  "name": "glslin-loader",
+  "version": "1.0.0",
+  "description": "a glsl loader that works like include macro in c to share code between files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayyaun/glslin-loader.git"
+  },
+  "keywords": [
+    "glsl",
+    "include",
+    "module",
+    "webgl"
+  ],
+  "author": "hayyaun (hayyaun@outlook.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayyaun/glslin-loader/issues"
+  },
+  "homepage": "https://github.com/hayyaun/glslin-loader#readme"
+}
