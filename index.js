@@ -8,7 +8,7 @@ module.exports = function (source, ...rest) {
   const root = options.root;
 
   const reg = /#(pragma\s+)?include\s+(['"])([^'"]+)\2;?/gi;
-  source = source.replace(reg, ($, _, _, name) => {
+  source = source.replace(reg, ($, _1, _2, name) => {
     const headerPath = path.resolve(root, name);
     this.addDependency(headerPath);
 
