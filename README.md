@@ -21,7 +21,6 @@ rules: [
     exclude: /node_modules/,
     use: [
       "raw-loader",
-      "glslify-loader",
       // use loader
       {
         loader: "glslin-loader",
@@ -29,6 +28,8 @@ rules: [
           root: path.resolve(__dirname, "src/shaders/lib"),
         },
       },
+      // NOTE: use it before glslify, or injected part won't be processed
+      "glslify-loader",
     ],
   },
 ];
@@ -54,3 +55,6 @@ void main() {
   gl_FragColor = vec4(color, alpha);
 }
 ```
+
+> Short form won't be applied on any import with `<>`.  
+> For example, `#import  <stdlib>` won't be affected!
